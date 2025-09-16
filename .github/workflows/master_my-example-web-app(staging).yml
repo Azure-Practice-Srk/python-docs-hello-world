@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - my-example-web-app
 on:
   push:
     branches:
-      - master
+      - staging
   workflow_dispatch:
 
 jobs:
@@ -58,4 +58,5 @@ jobs:
         with:
           app-name: 'my-example-web-app'
           slot-name: 'staging'
+
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_944760B70EFF416CADF4E733AD214382 }}
